@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
   res.send("hello");
 });
 app.use("/user", userRouter);
-app.use("/api/", categoryRouter);
+app.use("/api", categoryRouter);
 app.use("/api", uploadRouter);
 app.use("/api", productRouter);
 
