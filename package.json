@@ -16,6 +16,7 @@
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
     "cloudinary": "^1.25.0",
+    "config": "^3.3.6",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
@@ -34,6 +35,6 @@
   },
   "engines": {
     "node": "15.6.0",
-    "npm":"7.5.4"
+    "npm": "7.5.4"
   }
 }
