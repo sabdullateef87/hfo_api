@@ -6,7 +6,7 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const fileUpload = require("express-fileupload");
 const app = express();
-require("dotenv").config();
+// require("dotenv").config();
 const config = require("config");
 //custom imports
 const userRouter = require("./routes/userRouter");
