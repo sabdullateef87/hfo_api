@@ -36,6 +36,7 @@ const userController = {
         httpOnly: true,
         path: "/user/refresh_token",
       });
+      
       return res.json({ message: "User Registered Successfully!" });
     } catch (err) {
       if (err) throw err;
@@ -104,6 +105,8 @@ const userController = {
     res.json({ message: "cart update successfully" });
   },
 };
+
+
 const generateAccessToken = (user) => {
   return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "1d" });
 };

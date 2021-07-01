@@ -6,8 +6,8 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const fileUpload = require("express-fileupload");
 const app = express();
-// require("dotenv").config();
-const config = require("config");
+require("dotenv").config();
+
 //custom imports
 const userRouter = require("./routes/userRouter");
 const categoryRouter = require("./routes/categoryRouter");
@@ -31,7 +31,7 @@ app.use("/api", uploadRouter);
 app.use("/api", productRouter);
 
 //connect mongodb
-const URI = config.get("URI");
+const URI = process.env.URI;
 mongoose.connect(
   URI,
   {
