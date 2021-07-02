@@ -1,3 +1,4 @@
+require("dotenv").config();
 const PORT = process.env.PORT || 5000;
 const express = require("express");
 const mongoose = require("mongoose");
@@ -6,7 +7,6 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const fileUpload = require("express-fileupload");
 const app = express();
-require("dotenv").config();
 
 //custom imports
 const userRouter = require("./routes/userRouter");
@@ -29,7 +29,7 @@ app.use("/user", userRouter);
 app.use("/api", categoryRouter);
 app.use("/api", uploadRouter);
 app.use("/api", productRouter);
-
+console.log(process.env);
 //connect mongodb
 const URI = process.env.URI;
 mongoose.connect(
